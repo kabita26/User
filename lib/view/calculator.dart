@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
- 
+
 class CalculatorView extends StatefulWidget {
   const CalculatorView({super.key});
- 
+
   @override
   State<CalculatorView> createState() => _CalculatorViewState();
 }
- 
+
 class _CalculatorViewState extends State<CalculatorView> {
   final _textController = TextEditingController();
   List<String> lstSymbols = [
@@ -31,11 +31,11 @@ class _CalculatorViewState extends State<CalculatorView> {
     ".",
     "="
   ];
- 
+
   String currentInput = "";
   String operation = "";
   double? firstOperand;
- 
+
   void _handleInput(String symbol) {
     setState(() {
       if (symbol == "C") {
@@ -52,7 +52,9 @@ class _CalculatorViewState extends State<CalculatorView> {
         }
       } else if (symbol == "=") {
         // Calculate the result
-        if (firstOperand != null && operation.isNotEmpty && currentInput.isNotEmpty) {
+        if (firstOperand != null &&
+            operation.isNotEmpty &&
+            currentInput.isNotEmpty) {
           double secondOperand = double.parse(currentInput);
           double result = 0;
           switch (operation) {
@@ -92,7 +94,7 @@ class _CalculatorViewState extends State<CalculatorView> {
       }
     });
   }
- 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -156,4 +158,3 @@ class _CalculatorViewState extends State<CalculatorView> {
     );
   }
 }
- 
