@@ -1,4 +1,0 @@
-#Tue Nov 28 15:57:02 NPT 2023
-base.0=C\:\\Users\\User\\StudioProjects\\Chatbot\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
